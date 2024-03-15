@@ -1,15 +1,17 @@
 nums = [9,4,1,7]
-k = 2
-# Output: 2
+k = 3
+
 nums=sorted(nums)
-if k==1:
-  print(0)
-l= 0
-r=len(nums)-1
+start=0
+end=k-1
 
-diff=1000000
-while l<=r:
-  diff = min(diff,nums[r]-nums[l])
-  if diff
+minimum=100000
+while end<len(nums):
+  minimum= min(nums[end]-nums[start],minimum)
+  start+=1
+  end+=1
 
-  
+print(minimum)
+
+#In this code the biggest eureka moment was to realise that as it is sorted the windows size the first l and last element the r will always be smallest and biggest number which means we dont need to know the numbers in between
+
